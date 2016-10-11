@@ -6,7 +6,7 @@
 JOIN Customer ON Invoice.CustomerId = Customer.CustomerId
 WHERE BillingCountry = "Brazil"
 
-4.
+4. SELECT * FROM Employee Where title = "Sales Support Agent"
 5.
 6.
 7.
