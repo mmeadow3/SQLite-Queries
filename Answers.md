@@ -5,9 +5,8 @@
 3. SELECT Customer.FirstName || " " || Customer.LastName AS Name, InvoiceDate, BillingCountry, InvoiceId FROM Invoice 
 JOIN Customer ON Invoice.CustomerId = Customer.CustomerId
 WHERE BillingCountry = "Brazil"
-
 4. SELECT * FROM Employee Where title = "Sales Support Agent"
-5.
+5. SELECT DISTINCT BillingCountry FROM Invoice
 6.
 7.
 8.
