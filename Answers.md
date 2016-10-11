@@ -12,7 +12,9 @@ JOIN Customer ON Invoice.CustomerId = Customer.CustomerId
 WHERE BillingCountry = "Brazil"
 7. SELECT FirstName || " " || LastName AS Name, Title, InvoiceId FROM Employee 
 INNER JOIN Invoice i WHERE Title == "Sales Support Agent" 
-8.
+8. SELECT Invoice.Total, Customer.FirstName, Customer.Country, Employee.FirstName FROM Invoice 
+JOIN Customer ON Invoice.CustomerId = Customer.CustomerId
+JOIN Employee ON Customer.SupportRepId = Employee.EmployeeId
 9.
 10.
 11.
