@@ -1,7 +1,7 @@
 #### Answers
 
 1. SELECT FirstName || "" ||  LastName AS name,country FROM Customer WHERE NOT country = "USA"
-2.
+2. SELECT FirstName || "" ||  LastName AS name,country FROM Customer WHERE country = "Brazil"
 3.
 4.
 5.
