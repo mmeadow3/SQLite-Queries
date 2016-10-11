@@ -10,7 +10,8 @@ WHERE BillingCountry = "Brazil"
 6. SELECT * FROM Invoice 
 JOIN Customer ON Invoice.CustomerId = Customer.CustomerId
 WHERE BillingCountry = "Brazil"
-7.
+7. SELECT FirstName || " " || LastName AS Name, Title, InvoiceId FROM Employee 
+INNER JOIN Invoice i WHERE Title == "Sales Support Agent" 
 8.
 9.
 10.
