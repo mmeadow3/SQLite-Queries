@@ -7,7 +7,9 @@ JOIN Customer ON Invoice.CustomerId = Customer.CustomerId
 WHERE BillingCountry = "Brazil"
 4. SELECT * FROM Employee Where title = "Sales Support Agent"
 5. SELECT DISTINCT BillingCountry FROM Invoice
-6.
+6. SELECT * FROM Invoice 
+JOIN Customer ON Invoice.CustomerId = Customer.CustomerId
+WHERE BillingCountry = "Brazil"
 7.
 8.
 9.
