@@ -15,7 +15,10 @@ INNER JOIN Invoice i WHERE Title == "Sales Support Agent"
 8. SELECT Invoice.Total, Customer.FirstName, Customer.Country, Employee.FirstName FROM Invoice 
 JOIN Customer ON Invoice.CustomerId = Customer.CustomerId
 JOIN Employee ON Customer.SupportRepId = Employee.EmployeeId
-9.
+9. SELECT COUNT(InvoiceDate) FROM Invoice WHERE DATE(InvoiceDate) LIKE "2009%"
+SELECT SUM(Total) FROM Invoice WHERE DATE(InvoiceDate) LIKE "2009%"
+SELECT COUNT(InvoiceDate) FROM Invoice WHERE DATE(InvoiceDate) LIKE "2011%"
+SELECT SUM(Total) FROM Invoice WHERE DATE(InvoiceDate) LIKE "2011%"
 10.
 11.
 12.
