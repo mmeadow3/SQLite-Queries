@@ -1,6 +1,6 @@
 #### Answers
 
-1.
+1. SELECT FirstName || "" ||  LastName AS name,country FROM Customer WHERE NOT country = "USA"
 2.
 3.
 4.
