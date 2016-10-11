@@ -21,7 +21,9 @@ SELECT COUNT(InvoiceDate) FROM Invoice WHERE DATE(InvoiceDate) LIKE "2011%"
 SELECT SUM(Total) FROM Invoice WHERE DATE(InvoiceDate) LIKE "2011%"
 10. SELECT COUNT(Quantity) FROM InvoiceLine WHERE InvoiceLineId = 37
 11. SELECT COUNT(InvoiceId), InvoiceId FROM InvoiceLine GROUP BY InvoiceId
-12.
+12. SELECT Track.Name, InvoiceLine.InvoiceLineId FROM InvoiceLine 
+JOIN Track ON InvoiceLine.TrackId = Track.TrackId
+GROUP BY InvoiceLine.InvoiceLineId
 13.
 14.
 15.
