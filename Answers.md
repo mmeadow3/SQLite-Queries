@@ -2,7 +2,10 @@
 
 1. SELECT FirstName || "" ||  LastName AS name,country FROM Customer WHERE NOT country = "USA"
 2. SELECT FirstName || "" ||  LastName AS name,country FROM Customer WHERE country = "Brazil"
-3.
+3. SELECT Customer.FirstName || " " || Customer.LastName AS Name, InvoiceDate, BillingCountry, InvoiceId FROM Invoice 
+JOIN Customer ON Invoice.CustomerId = Customer.CustomerId
+WHERE BillingCountry = "Brazil"
+
 4.
 5.
 6.
