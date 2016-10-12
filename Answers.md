@@ -38,7 +38,8 @@ GROUP BY Playlist.Name
 JOIN Album ON Track.AlbumId = Album.AlbumId 
 JOIN MediaType ON Track.MediaTypeId = MediaType.MediaTypeId
 JOIN Genre ON  Track.GenreId = Genre.GenreId 
-17.
+17. SELECT InvoiceId, Count(*) Count FROM InvoiceLine 
+GROUP By InvoiceId
 18.
 19.
 20.
