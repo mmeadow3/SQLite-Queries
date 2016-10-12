@@ -87,5 +87,12 @@ JOIN Invoice ON Invoice.InvoiceId = InvoiceLine.InvoiceId
 GROUP BY Track.Name 
 ORDER BY AlbumTotal 
 DESC LIMIT 5
-26.
+26. SELECT Artist.Name, COUNT(InvoiceLineId) AS sold FROM InvoiceLine 
+JOIN Track on Track.TrackId = InvoiceLine.TrackId 
+JOIN Invoice ON Invoice.InvoiceId = InvoiceLine.InvoiceId 
+JOIN Album ON Album.AlbumID = Track.AlbumId 
+JOIN artist ON Artist.ArtistID = Album.ArtistId 
+GROUP BY Artist.Name 
+ORDER BY sold 
+DESC LIMIT 3
 27.
