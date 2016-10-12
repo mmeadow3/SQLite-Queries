@@ -68,7 +68,9 @@ JOIN InvoiceLine ON Invoice.InvoiceId = InvoiceLine.InvoiceId
 GROUP BY Employee.EmployeeId
 ORDER BY "Money" DESC
 LIMIT 1;
-22.
+22. SELECT Employee.FirstName, Employee.LastName, Count(*) AS "Customers" FROM Customer 
+JOIN Employee ON Employee.EmployeeID = Customer.SupportRepId 
+GROUP BY SupportRepId
 23.
 24.
 25.
