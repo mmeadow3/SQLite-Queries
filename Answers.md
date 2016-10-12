@@ -40,7 +40,13 @@ JOIN MediaType ON Track.MediaTypeId = MediaType.MediaTypeId
 JOIN Genre ON  Track.GenreId = Genre.GenreId 
 17. SELECT InvoiceId, Count(*) Count FROM InvoiceLine 
 GROUP By InvoiceId
-18.
+18. SELECT Employee.FirstName || " " || Employee.LastName AS "Name", SUM(Invoice.Total)AS "Money" FROM Employee
+JOIN Customer ON Employee.EmployeeId = Customer.SupportRepId
+JOIN Invoice ON Customer.CustomerId = Invoice.CustomerId
+JOIN InvoiceLine ON Invoice.InvoiceId = InvoiceLine.InvoiceId
+JOIN Track ON InvoiceLine.TrackId = Track.TrackId
+JOIN Genre ON Track.GenreId = Genre.GenreId
+GROUP BY Employee.EmployeeId
 19.
 20.
 21.
