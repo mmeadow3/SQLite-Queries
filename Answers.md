@@ -30,7 +30,10 @@ JOIN Album ON Track.AlbumId = Album.AlbumId
 JOIN Artist ON Album.ArtistId = Artist.ArtistId
 14. SELECT Count(*) FROM Invoice
 GROUP BY BillingCountry
-15.
+15. SELECT Playlist.Name, Count(*) Count FROM Track 
+JOIN PlaylistTrack ON PlaylistTrack.TrackId = Track.TrackId
+JOIN Playlist ON Playlist.PlaylistId = PlaylistTrack.PlaylistId
+GROUP BY Playlist.Name
 16.
 17.
 18.
