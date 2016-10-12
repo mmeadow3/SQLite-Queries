@@ -44,10 +44,15 @@ GROUP By InvoiceId
 JOIN Customer ON Employee.EmployeeId = Customer.SupportRepId
 JOIN Invoice ON Customer.CustomerId = Invoice.CustomerId
 JOIN InvoiceLine ON Invoice.InvoiceId = InvoiceLine.InvoiceId
-JOIN Track ON InvoiceLine.TrackId = Track.TrackId
-JOIN Genre ON Track.GenreId = Genre.GenreId
 GROUP BY Employee.EmployeeId
-19.
+19. SELECT Employee.FirstName || " " || Employee.LastName AS "Name", SUM(Invoice.Total)AS "Money" FROM Employee
+JOIN Customer ON Employee.EmployeeId = Customer.SupportRepId
+JOIN Invoice ON Customer.CustomerId = Invoice.CustomerId
+JOIN InvoiceLine ON Invoice.InvoiceId = InvoiceLine.InvoiceId
+WHERE InvoiceDate LIKE '2009%'
+GROUP BY Employee.EmployeeId
+ORDER BY "Money" DESC
+LIMIT 1;
 20.
 21.
 22.
