@@ -81,6 +81,11 @@ JOIN InvoiceLine ON Track.TrackId = InvoiceLine.Trackid
 JOIN Invoice ON Invoice.InvoiceId = InvoiceLine.InvoiceId
 WHERE InvoiceDate LIKE "2013%"
 GROUP BY Track.Name
-25.
+25. SELECT Track.Name, COUNT(InvoiceLineId) AS AlbumTotal FROM InvoiceLine 
+JOIN Track on Track.TrackId = InvoiceLine.TrackId 
+JOIN Invoice ON Invoice.InvoiceId = InvoiceLine.InvoiceId 
+GROUP BY Track.Name 
+ORDER BY AlbumTotal 
+DESC LIMIT 5
 26.
 27.
