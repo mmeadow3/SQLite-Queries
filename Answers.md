@@ -34,7 +34,10 @@ GROUP BY BillingCountry
 JOIN PlaylistTrack ON PlaylistTrack.TrackId = Track.TrackId
 JOIN Playlist ON Playlist.PlaylistId = PlaylistTrack.PlaylistId
 GROUP BY Playlist.Name
-16.
+16. SELECT Track.Name, Album.Title, MediaType.Name, Genre.Name FROM Track 
+JOIN Album ON Track.AlbumId = Album.AlbumId 
+JOIN MediaType ON Track.MediaTypeId = MediaType.MediaTypeId
+JOIN Genre ON  Track.GenreId = Genre.GenreId 
 17.
 18.
 19.
