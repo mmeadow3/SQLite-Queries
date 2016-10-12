@@ -95,4 +95,9 @@ JOIN artist ON Artist.ArtistID = Album.ArtistId
 GROUP BY Artist.Name 
 ORDER BY sold 
 DESC LIMIT 3
-27.
+27. SELECT MediaType.Name, COUNT(InvoiceLineId) AS sold FROM InvoiceLine 
+JOIN Track on Track.TrackId = InvoiceLine.TrackId 
+JOIN MediaType ON MediaType.MediaTypeId = Track.MediaTypeId 
+GROUP BY MediaType.Name 
+ORDER BY sold 
+DESC LIMIT 1
