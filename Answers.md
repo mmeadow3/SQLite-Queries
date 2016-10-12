@@ -28,7 +28,8 @@ GROUP BY InvoiceLine.InvoiceLineId
 JOIN Track ON InvoiceLine.TrackId = Track.TrackId 
 JOIN Album ON Track.AlbumId = Album.AlbumId
 JOIN Artist ON Album.ArtistId = Artist.ArtistId
-14. 
+14. SELECT Count(*) FROM Invoice
+GROUP BY BillingCountry
 15.
 16.
 17.
