@@ -61,7 +61,13 @@ WHERE InvoiceDate LIKE '2010%'
 GROUP BY Employee.EmployeeId
 ORDER BY "Money" DESC
 LIMIT 1;
-21.
+21. SELECT Employee.FirstName || " " || Employee.LastName AS "Name", SUM(Invoice.Total)AS "Money" FROM Employee
+JOIN Customer ON Employee.EmployeeId = Customer.SupportRepId
+JOIN Invoice ON Customer.CustomerId = Invoice.CustomerId
+JOIN InvoiceLine ON Invoice.InvoiceId = InvoiceLine.InvoiceId
+GROUP BY Employee.EmployeeId
+ORDER BY "Money" DESC
+LIMIT 1;
 22.
 23.
 24.
