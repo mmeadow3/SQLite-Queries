@@ -24,8 +24,11 @@ SELECT SUM(Total) FROM Invoice WHERE DATE(InvoiceDate) LIKE "2011%"
 12. SELECT Track.Name, InvoiceLine.InvoiceLineId FROM InvoiceLine 
 JOIN Track ON InvoiceLine.TrackId = Track.TrackId
 GROUP BY InvoiceLine.InvoiceLineId
-13.
-14.
+13. SELECT InvoiceId, Track.Name, Artist.Name FROM InvoiceLine 
+JOIN Track ON InvoiceLine.TrackId = Track.TrackId 
+JOIN Album ON Track.AlbumId = Album.AlbumId
+JOIN Artist ON Album.ArtistId = Artist.ArtistId
+14. 
 15.
 16.
 17.
