@@ -71,7 +71,11 @@ LIMIT 1;
 22. SELECT Employee.FirstName, Employee.LastName, Count(*) AS "Customers" FROM Customer 
 JOIN Employee ON Employee.EmployeeID = Customer.SupportRepId 
 GROUP BY SupportRepId
-23.
+23. SELECT Sum(Total) AS MoneySpent, BillingCountry FROM Invoice
+JOIN InvoiceLine ON Invoice.InvoiceId = InvoiceLine.InvoiceId
+Group BY BillingCountry
+ORDER BY "MoneySpent" DESC
+LIMIT 1;
 24.
 25.
 26.
