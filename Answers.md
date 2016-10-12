@@ -76,7 +76,11 @@ JOIN InvoiceLine ON Invoice.InvoiceId = InvoiceLine.InvoiceId
 Group BY BillingCountry
 ORDER BY "MoneySpent" DESC
 LIMIT 1;
-24.
+24. SELECT COUNT(InvoiceLine.InvoiceLineId) FROM Track
+JOIN InvoiceLine ON Track.TrackId = InvoiceLine.Trackid
+JOIN Invoice ON Invoice.InvoiceId = InvoiceLine.InvoiceId
+WHERE InvoiceDate LIKE "2013%"
+GROUP BY Track.Name
 25.
 26.
 27.
